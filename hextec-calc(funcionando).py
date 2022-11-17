@@ -8,7 +8,7 @@ def cls():
 
 jogadores = {  
          "Akshan": {
-             "Vida": 00,
+             "Vida": 28,
              "Classe de Armadura": 13,
              "Força": 19,
              "Destreza": 30,
@@ -18,7 +18,7 @@ jogadores = {
              "Carisma": 21,
              },
          "Lux": {
-             "Vida": 00,
+             "Vida": 1,
              "Classe de Armadura": 12,
              "Força": 15,
              "Destreza": 18,
@@ -28,7 +28,7 @@ jogadores = {
              "Carisma": 14,
              },
          "I.A.R.A": {
-             "Vida": 00,
+             "Vida": 24,
              "Classe de Armadura": 13,
              "Força": 14,
              "Destreza": 12,
@@ -38,7 +38,7 @@ jogadores = {
              "Carisma": 16,
              },
          "Sett": {
-             "Vida": 00,
+             "Vida": 1,
              "Classe de Armadura": 13,
              "Força": 16,
              "Destreza": 24,
@@ -48,7 +48,7 @@ jogadores = {
              "Carisma": 16,
              },
          "Vayne": {
-             "Vida": 00,
+             "Vida": 27,
              "Classe de Armadura": 13,
              "Força": 14,
              "Destreza": 24,
@@ -58,7 +58,7 @@ jogadores = {
              "Carisma": 16,
              },
          "Yasuo": {
-             "Vida": 00,
+             "Vida": 31,
              "Classe de Armadura": 13,
              "Força": 14,
              "Destreza": 24,
@@ -68,7 +68,7 @@ jogadores = {
              "Carisma": 16,
              },
          "Jinx": {
-             "Vida": 00,
+             "Vida": 1,
              "Classe de Armadura": 13,
              "Força": 20,
              "Destreza": 24,
@@ -218,7 +218,7 @@ while True:
                             print("Valor incorreto, tente novamente!")
                             print("\n")
                 adicionando_inimigo = True
-                tabela = True
+                tabela = True 
             elif (escolha_inimigos == "2"): #Listar Inimigos
                 cls()
                 for contador in range(len(inimigos)):
@@ -229,15 +229,21 @@ while True:
                     print("")
     elif (escolha == "2"): # Atacar
         cls()
+        print(inimigos)
         print("Inimigos vivos:")
         print("")
         for contador in range (len(inimigos)):
-            print(f'{contador+1}.{inimigos[f"inimigo{contador}"]["Nome"]}')
+            print("\n")
+            print(f'{contador+1} . {inimigos["Nome"]}')
+            print(f' Vida: {inimigos["Vida"]}')
+            print(f' Classe de Armadura: {inimigos["Classe de Armadura"]}')
+            #print(f'{contador}.{inimigos[f"{inimigos{contador}}"]["Nome"]}')
         print("")
         print("Jogadores vivos:")
         print("")
         for contador in range (len(jogadores)):
-            print(f'{contador+1}.{jogadores[f"id{contador}"]["Nome"]}')
+            print('Parte em produção')
+            #print(f'{contador+1}.{jogadores[f"id{contador+1}"]["Nome"]}')
         print("")
         while True:
             atacar = str((input("Selecione um alvo para atacar \n3.Voltar \n---> ")))
